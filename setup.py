@@ -3,7 +3,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setup(
     name = 'ERDot',
-    version = '0.1.2',
+    version = '1.3.0',
     author="Darcy Lugt-Falk",
     author_email="darcy@darcylf.me",
     long_description=long_description,
