@@ -3,6 +3,7 @@ env
 test.json
 ERDotOutput.dot
 .pypirc
+imageFile.png
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

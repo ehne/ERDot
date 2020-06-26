@@ -1,0 +1,23 @@
+{
+    "tables":{
+        "Person":{
+            "*name":"char()",
+            "height":"int()",
+            "weight":"int()",
+            "birthDate":"date()",
+            "birthPlaceID":"int()"
+        },
+        "BirthPlace":{
+            "*id":"int()",
+            "birthCity":"char()",
+            "birthState":"char()",
+            "birthCountry":"char()"
+        }
+    },
+    "relations":[
+        "Person:birthPlaceID *--1 BirthPlace:id"
+    ],
+    "rankAdjustments":"",
+    "label":""
+}
+

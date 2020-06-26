@@ -1,0 +1,54 @@
+
+digraph G {
+    graph [
+        nodesep=0.5;
+        rankdir="LR";
+        cencentrate=true;
+        splines="spline";
+        fontname="Helvetica";
+        pad="0.2,0.2",
+        label="",
+        
+    ];
+    
+    node [shape=plain, fontname="Helvetica"];
+    edge [
+        dir=both,
+        fontsize=12,
+        arrowsize=0.9,
+        penwidth=1.0,
+        labelangle=32,
+        labeldistance=1.8,
+        fontname="Helvetica"
+    ];
+    
+    Person [ label=<
+        <table border="0" cellborder="1" cellspacing="0" >
+        <tr><td><i>Person</i></td></tr>
+        <tr><td port="name" align="left" cellpadding="5">PK name <font color="grey60">char()</font></td></tr>
+        <tr><td port="height" align="left" cellpadding="5">height <font color="grey60">int()</font></td></tr>
+        <tr><td port="weight" align="left" cellpadding="5">weight <font color="grey60">int()</font></td></tr>
+        <tr><td port="birthDate" align="left" cellpadding="5">birthDate <font color="grey60">date()</font></td></tr>
+        <tr><td port="birthPlaceID" align="left" cellpadding="5">birthPlaceID <font color="grey60">int()</font></td></tr>
+    </table>>];
+    BirthPlace [ label=<
+        <table border="0" cellborder="1" cellspacing="0" >
+        <tr><td><i>BirthPlace</i></td></tr>
+        <tr><td port="id" align="left" cellpadding="5">PK id <font color="grey60">int()</font></td></tr>
+        <tr><td port="birthCity" align="left" cellpadding="5">birthCity <font color="grey60">char()</font></td></tr>
+        <tr><td port="birthState" align="left" cellpadding="5">birthState <font color="grey60">char()</font></td></tr>
+        <tr><td port="birthCountry" align="left" cellpadding="5">birthCountry <font color="grey60">char()</font></td></tr>
+    </table>>];
+
+
+    Person:birthPlaceID->BirthPlace:id [
+        arrowhead=noneotee,
+
+        arrowtail=ocrow,
+    ];
+
+
+
+    
+
+}
