@@ -37,7 +37,6 @@ digraph G {
     % for i in relations:
     % q = i.split(" ")
     % k = q[1].split("--")
-    % print(k)
     % LeftCardinality = k[0]
     % RightCardinality = k[1]
 
