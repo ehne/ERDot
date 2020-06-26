@@ -46,9 +46,11 @@ def main(i, o):
         ra=rankAdjustments,
         gs="",
         lbl=label)
-
-    print(stringGen)
-
+    print("created graphvis dot code!")
+    
+    # write dot code to output file
+    outputFile.write(stringGen)
+    print(f"saved graphvis dot code to {o} !")
 
 if __name__ == "__main__":
     main()
