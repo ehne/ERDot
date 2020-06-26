@@ -5,8 +5,6 @@ import json
 import click
 import os
 
-
-
 @click.command()
 @click.option(
     "-i", "--inputFile", "i", required=True, help="The input ERDJSON file (.json)"
