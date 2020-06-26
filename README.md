@@ -5,7 +5,9 @@
   Welcome to ERDot 👋
 </h1>
 <p>
-  <img alt="PyPI" src="https://img.shields.io/pypi/v/ERDot?color=blue">
+  <a href="https://pypi.org/project/ERDot/">
+    <img alt="PyPI" src="https://img.shields.io/pypi/v/ERDot?color=blue">
+  </a>
   <a href="https://github.com/ehne/ERDot/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/github/license/ehne/ERDot" />
   </a>
@@ -34,5 +36,3 @@ Give a ⭐️ if this project helped you!
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
-
-_Flower by iconsphere from the Noun Project_
