@@ -1,2 +1,4 @@
 .vscode
 env
+test.json
+ERDotOutput.dot

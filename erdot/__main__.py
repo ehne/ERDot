@@ -1,13 +1,54 @@
 import sys
-from .b import template as t
+from .b import SimpleTemplate as t
+from .dTemplate import dTemp
 import json
 import click
+import os
+
+
 
 @click.command()
-@click.option("-i", "--inputFile",required=True, help="The input ERDJSON file (.json)")
-@click.option("-o", "--outputFile",required=True, help="The graphvis dot file to write to (.dot)")
+@click.option(
+    "-i", "--inputFile", "i", required=True, help="The input ERDJSON file (.json)"
+)
+@click.option(
+    "-o",
+    "--outputFile",
+    "o",
+    required=True,
+    help="The graphvis dot file to write to (.dot)",
+    default="ERDotOutput.dot",
+)
 def main(i, o):
-    print(i, o)
+    # loads input json
+    jsonLoaded = ""
+    with click.open_file(i) as f:
+        jsonLoaded = json.load(f)
+    print(f"loaded {i} !")
 
-if __name__ == '__main__':
+    # opens the file to write to
+    outputFile = click.open_file(o, "w+")
+
+    # splits json into chunks
+    try:
+        tables = jsonLoaded["tables"]
+        relations = jsonLoaded["relations"]
+        rankAdjustments = jsonLoaded["rankAdjustments"]
+        label = jsonLoaded["label"]
+    except:
+        print("You are missing some information from your json file!")
+        exit()
+
+    # generates the dot code
+    tpl = t(dTemp)
+    stringGen = tpl.render(tables=tables,
+        relations=relations,
+        ra=rankAdjustments,
+        gs="",
+        lbl=label)
+
+    print(stringGen)
+
+
+if __name__ == "__main__":
     main()
