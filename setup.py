@@ -2,8 +2,8 @@ from setuptools import setup
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setup(
-    name = 'ERDot-ehne',
-    version = '0.1.0',
+    name = 'ERDot',
+    version = '0.1.1',
     author="Darcy Lugt-Falk",
     author_email="darcy@darcylf.me",
     long_description=long_description,

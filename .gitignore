@@ -2,6 +2,7 @@
 env
 test.json
 ERDotOutput.dot
+.pypirc
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
