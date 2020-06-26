@@ -1,11 +1,11 @@
 <p>
-  <img alt="logo" src="logo.png" align="center"/>
+  <img alt="logo" src="https://github.com/ehne/ERDot/raw/master/logo.png" align="center"/>
 </p>
 <h1 align="center">
   Welcome to ERDot 👋
 </h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="PyPI" src="https://img.shields.io/pypi/v/ERDot?color=blue">
   <a href="https://github.com/ehne/ERDot/blob/master/LICENSE">
     <img alt="License: MIT" src="https://img.shields.io/github/license/ehne/ERDot" />
   </a>
