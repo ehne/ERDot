@@ -6,8 +6,8 @@ import click
 import os
 
 @click.command()
-@click.option(
-    "-i", "--inputFile", "i", required=True, help="The input ERDJSON file (.json)"
+@click.argument(
+    "inputfile", type=click.Path(exists=True)
 )
 @click.option(
     "-o",
@@ -15,17 +15,24 @@ import os
     "o",
     required=True,
     help="The graphvis dot file to write to (.dot)",
-    default="ERDotOutput.dot",
+    default= ""
 )
-def main(i, o):
+def main(inputfile, o):
+    i = inputfile
     # loads input json
     jsonLoaded = ""
     with click.open_file(i) as f:
         jsonLoaded = json.load(f)
-    print(f"loaded {i} !")
-
+    print(f"loaded {i}!")
+    
+    # figure out the output file name
+    outFileName = ""
+    if o == "":
+        outFileName = f"{i.replace('.erd', '').replace('.json', '')}.dot"
+    else:
+        outFileName = o
     # opens the file to write to
-    outputFile = click.open_file(o, "w+")
+    outputFile = click.open_file(outFileName, "w+")
 
     # splits json into chunks
     try:
@@ -48,7 +55,7 @@ def main(i, o):
     
     # write dot code to output file
     outputFile.write(stringGen)
-    print(f"saved graphvis dot code to {o} !")
+    print(f"saved graphvis dot code to {outFileName}!")
 
 if __name__ == "__main__":
     main()

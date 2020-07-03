@@ -1,6 +1,6 @@
 # the template for the dot output file
 
-dTemp = """
+dTemp = """/* created with ERDot < https://github.com/ehne/ERDot > */
 digraph G {
     graph [
         nodesep=0.5;
