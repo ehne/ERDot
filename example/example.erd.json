@@ -5,7 +5,7 @@
             "height":"int()",
             "weight":"int()",
             "birthDate":"date()",
-            "birthPlaceID":"int()"
+            "+birthPlaceID":"int()"
         },
         "BirthPlace":{
             "*id":"int()",

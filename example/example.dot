@@ -29,7 +29,7 @@ digraph G {
         <tr><td port="height" align="left" cellpadding="5">height <font color="grey60">int()</font></td></tr>
         <tr><td port="weight" align="left" cellpadding="5">weight <font color="grey60">int()</font></td></tr>
         <tr><td port="birthDate" align="left" cellpadding="5">birthDate <font color="grey60">date()</font></td></tr>
-        <tr><td port="birthPlaceID" align="left" cellpadding="5">birthPlaceID <font color="grey60">int()</font></td></tr>
+        <tr><td port="birthPlaceID" align="left" cellpadding="5">FK birthPlaceID <font color="grey60">int()</font></td></tr>
     </table>>];
     BirthPlace [ label=<
         <table border="0" cellborder="1" cellspacing="0" >

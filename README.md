@@ -121,7 +121,7 @@ a string that sets what label will be drawn on top of the ERD, think of it like 
             "height":"int()",
             "weight":"int()",
             "birthDate":"date()",
-            "birthPlaceID":"int()"
+            "+birthPlaceID":"int()"
         },
         "BirthPlace":{
             "*id":"int()",
