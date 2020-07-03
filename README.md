@@ -20,7 +20,7 @@ to install ERDot:
 
 ```pip install ERDot```
 
-you may also need to [install graphvis](https://graphviz.org/download/) to be able to create images of the dot files generated.  
+you may also need to [install graphvis](https://graphviz.org/download/) to be able to create images of the dot files generated. If you don't want to install graphviz, you can copy the contents of the generated dot file into an [online grapviz viewer](https://edotor.net).
 
 ## CLI Usage
 ```
@@ -32,13 +32,15 @@ Options:
   --help                 Show this message and exit.
 ```
 
-Note that after generating the .dot file, you will still need to output it to your desired format using graphvis. An example of how to do this:
+Note that after generating the .dot file, you will still need to output it to your desired format using graphviz. An example of how to do this:
 
 ```bash
 erdot -i inputFile.erd.json 
 
 dot ERDotOutput.dot -Tpng -o imageFile.png
 ```
+
+(You could also copy and paste the contents of the .dot file into an [online graphviz viewer](https://edotor.net))
 
 ## ERDJSON format:
 ```json
