@@ -28,7 +28,7 @@ Usage: erdot INPUTFILE [OPTIONS]
 
 Options:
   INPUTFILE        TEXT  The input ERDJSON file (.erd.json)  [required]
-  -o, --outputFile TEXT  The graphvis dot file to write to (.dot) [not required]
+  -o, --outputFile TEXT  The graphvis dot file to write to (.dot) [optional]
   --help                 Show this message and exit.
 ```
 
