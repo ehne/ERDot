@@ -24,20 +24,20 @@ you may also need to [install graphvis](https://graphviz.org/download/) to be ab
 
 ## CLI Usage
 ```
-Usage: erdot [OPTIONS]
+Usage: erdot INPUTFILE [OPTIONS]
 
 Options:
-  -i, --inputFile TEXT   The input ERDJSON file (.json)  [required]
-  -o, --outputFile TEXT  The graphvis dot file to write to (.dot)  (default: ERDotOutput.dot)
+  INPUTFILE        TEXT  The input ERDJSON file (.erd.json)  [required]
+  -o, --outputFile TEXT  The graphvis dot file to write to (.dot) [not required]
   --help                 Show this message and exit.
 ```
 
 Note that after generating the .dot file, you will still need to output it to your desired format using graphviz. An example of how to do this:
 
 ```bash
-erdot -i inputFile.erd.json 
+erdot example.erd.json 
 
-dot ERDotOutput.dot -Tpng -o imageFile.png
+dot example.dot -Tpng -o imageFile.png
 ```
 
 (You could also copy and paste the contents of the .dot file into an [online graphviz viewer](https://edotor.net))
