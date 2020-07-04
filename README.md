@@ -23,12 +23,13 @@ to install ERDot:
 you may also need to [install graphvis](https://graphviz.org/download/) to be able to create images of the dot files generated. If you don't want to install graphviz, you can copy the contents of the generated dot file into an [online grapviz viewer](https://edotor.net).
 
 ## CLI Usage
-```
-Usage: erdot INPUTFILE [OPTIONS]
+```bash
+Usage: erdot INPUTFILE [OPTIONS] 
+
+  ERDot generates graphvis .dot files from the .json file INPUTFILE.
 
 Options:
-  INPUTFILE        TEXT  The input ERDJSON file (.erd.json)  [required]
-  -o, --outputFile TEXT  The graphvis dot file to write to (.dot) [optional]
+  -o, --outputFile TEXT  The graphvis dot file to write to (.dot)
   --help                 Show this message and exit.
 ```
 
