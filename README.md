@@ -148,9 +148,8 @@ which then creates this image:
 
 ## Author
 
-👤 **Darcy Lugt-Falk**
+👤 **ehne**
 
-* Website: [darcylf.me](https://darcylf.me)
 * Github: [@ehne](https://github.com/ehne)
 
 ## Show your support
