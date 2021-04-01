@@ -25,7 +25,7 @@ digraph G {
     ];
     
     % for i in tables:
-    {{i}} [ label=<
+    "{{i}}" [ label=<
         <table border="0" cellborder="1" cellspacing="0" >
         <tr><td><i>{{i}}</i></td></tr>
     % for k in tables[i]:
@@ -36,11 +36,15 @@ digraph G {
 
     % for i in relations:
     % q = i.split(" ")
+    
     % k = q[1].split("--")
     % LeftCardinality = k[0]
     % RightCardinality = k[1]
-
-    {{q[0]}}->{{q[2]}} [
+    % q1lhs = q[0].split(":")[0]
+    % q1rhs = q[0].split(":")[1]
+    % q2lhs = q[2].split(":")[0]
+    % q2rhs = q[2].split(":")[1]
+    "{{q1lhs}}":"{{q1rhs}}"->"{{q2lhs}}":"{{q2rhs}}" [
     % if RightCardinality == "*":
         arrowhead=ocrow,
     % elif RightCardinality == "+":

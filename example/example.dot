@@ -1,4 +1,4 @@
- /* created with ERDot < https://github.com/ehne/ERDot > */
+/* created with ERDot < https://github.com/ehne/ERDot > */
 digraph G {
     graph [
         nodesep=0.5;
@@ -22,7 +22,7 @@ digraph G {
         fontname="Helvetica"
     ];
     
-    Person [ label=<
+    "Person" [ label=<
         <table border="0" cellborder="1" cellspacing="0" >
         <tr><td><i>Person</i></td></tr>
         <tr><td port="name" align="left" cellpadding="5">PK name <font color="grey60">char()</font></td></tr>
@@ -31,7 +31,7 @@ digraph G {
         <tr><td port="birthDate" align="left" cellpadding="5">birthDate <font color="grey60">date()</font></td></tr>
         <tr><td port="birthPlaceID" align="left" cellpadding="5">FK birthPlaceID <font color="grey60">int()</font></td></tr>
     </table>>];
-    BirthPlace [ label=<
+    "BirthPlace" [ label=<
         <table border="0" cellborder="1" cellspacing="0" >
         <tr><td><i>BirthPlace</i></td></tr>
         <tr><td port="id" align="left" cellpadding="5">PK id <font color="grey60">int()</font></td></tr>
@@ -40,8 +40,8 @@ digraph G {
         <tr><td port="birthCountry" align="left" cellpadding="5">birthCountry <font color="grey60">char()</font></td></tr>
     </table>>];
 
-
-    Person:birthPlaceID->BirthPlace:id [
+    
+    "Person":"birthPlaceID"->"BirthPlace":"id" [
         arrowhead=noneotee,
 
         arrowtail=ocrow,

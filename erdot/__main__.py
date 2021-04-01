@@ -57,6 +57,7 @@ def generateDotCode(_chunkedJSON):
 )
 def main(inputfile, o):
     """ERDot generates graphvis .dot files from the .json file INPUTFILE."""
+    
     i = inputfile
     # loads input json
     jsonLoaded = loadJson(i)
