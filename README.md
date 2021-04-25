@@ -72,7 +72,7 @@ Each table inside of the table section of the ERDJSON document is formated like 
 
 the general idea is that the key is the column name, and the value is the type.
 
-you will also notice the `*` and `+` next to the column names, these indicate primary and foriegn keys respectively. You can combine two of these together into a primary foreign key, just by putting both a `*` and a `+` next to the name.
+you will also notice the `*` and `+` next to the column names, these indicate primary and foriegn keys respectively. You can combine two of these together into a primary foreign key (a composite key consisting of two foreign keys), just by putting both a `*` and a `+` next to the name.
 
 ### relations:
 each element in the relations array of the ERDJSON document is formatted like this:
