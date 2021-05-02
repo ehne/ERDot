@@ -55,13 +55,18 @@ def generateDotCode(_chunkedJSON):
     help="The graphvis dot file to write to (.dot)",
     default="",
 )
-def main(inputfile, o):
+@click.option("-q", "--quiet", "q", help="Suppresses program information messages.", is_flag=True)
+def main(inputfile, o, q):
     """ERDot generates graphvis .dot files from the .json file INPUTFILE."""
     
+    # custom print function with quiet
+    def qprint(msg):
+        if not q:
+            print(msg)
     i = inputfile
     # loads input json
     jsonLoaded = loadJson(i)
-    print(f"loaded {i}")
+    qprint(f"loaded {i}")
     # figure out the output file name
     outFileName = figureOutOutputFileName(i, o)
 
@@ -71,10 +76,10 @@ def main(inputfile, o):
     chunkedJSON = splitJSONIntoChuncks(jsonLoaded)
     # generates the dot code
     stringGen = generateDotCode(chunkedJSON)
-    print(f"generated .dot code")
+    qprint(f"generated .dot code")
     # write dot code to output file
     outputFile.write(stringGen)
-    print(f"saved graphvis dot code to {outFileName}!")
+    qprint(f"saved graphvis dot code to {outFileName}!")
 
 
 if __name__ == "__main__":
