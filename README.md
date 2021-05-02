@@ -98,10 +98,10 @@ exactly 1      1
 1 or more      +
 ```
 
-So for example, the following defines a relationship between Person's PersonID primary key and BirthPlace's PersonID foreign key that reads "every person has exactly one birth place, linked together using PersonID":
+So for example, the following defines a relationship between Person's birthplaceID foreign key and BirthPlace's ID primary key that reads "every person has exactly one birth place, linked together using the birthplaceID":
 
 ```python
-Person:PersonID *--1 BirthPlace:PersonID
+Person:birthplaceID *--1 BirthPlace:ID
 ```
 
 ### rankAdjustments
