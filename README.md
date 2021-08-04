@@ -13,7 +13,7 @@
   </a>
 </p>
 
-> Creates Entity Relationship Diagrams from JSON code.
+> Creates Entity Relationship Diagrams from JSON/YAML code.
 
 ## Installation
 to install ERDot:
@@ -26,7 +26,7 @@ you may also need to [install graphvis](https://graphviz.org/download/) to be ab
 ```bash
 Usage: erdot [OPTIONS] INPUTFILE
 
-  ERDot generates graphvis .dot files from the .json file INPUTFILE.
+  ERDot generates graphvis .dot files from the .json, .y[a]ml files INPUTFILE.
 
 Options:
   -o, --outputFile TEXT  The graphvis dot file to write to (.dot)

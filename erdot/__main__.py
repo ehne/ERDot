@@ -16,7 +16,7 @@ def loadJson(_inputFile):
 def figureOutOutputFileName(_inputFile, _outputFile):
     outFileName = ""
     if _outputFile == "":
-        outFileName = f"{_inputFile.replace('.erd', '').replace('.json', '')}.dot"
+        outFileName = f"{_inputFile.replace('.erd', '').replace('.json', '').replace('.yml', '').replace('yaml', '')}.dot"
     else:
         outFileName = _outputFile
     return outFileName
@@ -64,8 +64,13 @@ def main(inputfile, o, q):
         if not q:
             print(msg)
     i = inputfile
-    # loads input json
-    jsonLoaded = loadJson(i)
+    if os.path.splitext(i)[1] in ('.yml', 'yaml'):
+        from ruamel.yaml import YAML
+        yaml = YAML()
+        jsonLoaded = json.loads(json.dumps(yaml.load(open(i))))
+    else:
+        # loads input json
+        jsonLoaded = loadJson(i)
     qprint(f"loaded {i}")
     # figure out the output file name
     outFileName = figureOutOutputFileName(i, o)

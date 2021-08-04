@@ -13,6 +13,10 @@ setup(
     install_requires=[
         'Click',
     ],
+    extras_require = {
+        'yaml':  ["ruamel.yaml"]
+    },
+
     entry_points = {
         'console_scripts': [
             '''erdot = erdot.__main__:main'''
