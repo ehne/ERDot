@@ -26,10 +26,10 @@ you may also need to [install graphvis](https://graphviz.org/download/) to be ab
 ```bash
 Usage: erdot [OPTIONS] INPUTFILE
 
-  ERDot generates graphvis .dot files from the .json, .y[a]ml files INPUTFILE.
+  ERDot generates graphvis .dot files from the .json/.yml files INPUTFILE.
 
 Options:
-  -o, --outputFile TEXT  The graphvis dot file to write to (.dot)
+  -o, --outputFile TEXT  The graphvis dot file to write (.dot)
   -q, --quiet            Suppresses program information messages.
   --help                 Show this message and exit.
 ```
@@ -146,6 +146,26 @@ which then creates this image:
 
 <img alt="logo" src="https://github.com/ehne/ERDot/raw/master/example/example.png" align="center"/>
 
+The ERDYAML of the same image would look like:
+
+```yaml
+tables:
+  Person:
+    "*name": char()
+    height: int()
+    weight: int()
+    birthDate: date()
+    "+birthPlaceID": int()
+  BirthPlace:
+    "*id": int()
+    birthCity: char()
+    birthState: char()
+    birthCountry: char()
+relations:
+- Person:birthPlaceID *--1 BirthPlace:id
+rankAdjustments: ''
+label: ''
+```
 
 ## Author
 
