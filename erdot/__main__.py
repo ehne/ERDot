@@ -64,8 +64,12 @@ def main(inputfile, o, q):
         if not q:
             print(msg)
     i = inputfile
-    if os.path.splitext(i)[1] in ('.yml', 'yaml'):
-        from ruamel.yaml import YAML
+    if os.path.splitext(i)[1] in ('.yml', '.yaml'):
+        try:
+            from ruamel.yaml import YAML
+        except ModuleNotFoundError:
+            print("YAML support requires ruamel.yaml\nInstall it via pypi (https://pypi.org/project/ruamel.yaml/)")
+            quit()
         yaml = YAML()
         jsonLoaded = json.loads(json.dumps(yaml.load(open(i))))
     else:
