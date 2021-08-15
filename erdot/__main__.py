@@ -16,7 +16,7 @@ def loadJson(_inputFile):
 def figureOutOutputFileName(_inputFile, _outputFile):
     outFileName = ""
     if _outputFile == "":
-        outFileName = f"{_inputFile.replace('.erd', '').replace('.json', '').replace('.yml', '').replace('yaml', '')}.dot"
+        outFileName = f"{_inputFile.replace('.erd', '').replace('.json', '').replace('.yml', '').replace('.yaml', '')}.dot"
     else:
         outFileName = _outputFile
     return outFileName
@@ -57,7 +57,7 @@ def generateDotCode(_chunkedJSON):
 )
 @click.option("-q", "--quiet", "q", help="Suppresses program information messages.", is_flag=True)
 def main(inputfile, o, q):
-    """ERDot generates graphvis .dot files from the .json file INPUTFILE."""
+    """ERDot generates graphvis .dot files from the .json/.yml file INPUTFILE."""
     
     # custom print function with quiet
     def qprint(msg):
