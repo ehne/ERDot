@@ -3,7 +3,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setup(
     name = 'ERDot',
-    version = '2.2.0',
+    version = '2.3.0',
     author="Darcy Lugt-Falk",
     author_email="darcy@darcylf.me",
     long_description=long_description,
@@ -13,6 +13,10 @@ setup(
     install_requires=[
         'Click',
     ],
+    extras_require = {
+        'yaml':  ["ruamel.yaml"]
+    },
+
     entry_points = {
         'console_scripts': [
             '''erdot = erdot.__main__:main'''
