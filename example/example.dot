@@ -3,7 +3,7 @@ digraph G {
     graph [
         nodesep=0.5;
         rankdir="LR";
-        cencentrate=true;
+        concentrate=true;
         splines="spline";
         fontname="Helvetica";
         pad="0.2,0.2",
