@@ -3,9 +3,9 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setup(
     name = 'ERDot',
-    version = '2.3.0',
-    author="Darcy Lugt-Falk",
-    author_email="darcy@darcylf.me",
+    version = '2.3.1',
+    author="ehne",
+    author_email="ehne@duck.com",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ehne/ERDot",
